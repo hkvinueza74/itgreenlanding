@@ -1,129 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ITGREEN SOLUTIONS</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:sans-serif; color:#1E293B; background:#F8FAFC; line-height:1.5; }
+    .container { max-width:1100px; margin:0 auto; padding:0 20px; }
+    header { background:#FFF; border-bottom:2px solid #E2E8F0; position:sticky; top:0; z-index:1000; padding:15px; }
+    .navbar { display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-size:1.3rem; font-weight:bold; color:#0B5294; text-decoration:none; }
+    .logo span { color:#2EAF4A; }
+    .menu { display:flex; list-style:none; gap:15px; }
+    .menu a { text-decoration:none; color:#1E293B; font-weight:bold; font-size:0.85rem; }
+    .hero { background:#FFF; padding:60px 0; border-bottom:1px solid #E2E8F0; }
+    .hero-flex { display:flex; flex-wrap:wrap; align-items:center; gap:30px; }
+    .hero-text { flex:1.2; min-width:300px; }
+    .hero-text h1 { font-size:2.3rem; color:#0B5294; margin-bottom:15px; }
+    .hero-text span { color:#2EAF4A; }
+    .btn { display:inline-block; background:#2EAF4A; color:#FFF; padding:12px 25px; border-radius:20px; text-decoration:none; font-weight:bold; }
+    .hero-img { flex:0.8; min-width:300px; }
+    .panel { background:#0B5294; border-radius:12px; padding:25px; color:#FFF; border-left:6px solid #2EAF4A; }
+    .panel h3 { color:#2EAF4A; margin-bottom:10px; }
+    .section { padding:60px 0; }
+    .block-pane { padding:20px; border-radius:10px; margin-top:15px; font-size:0.9rem; }
+    .pane-r { background:#FEF2F2; border:1px solid #FCA5A5; color:#991B1B; }
+    .pane-g { background:#F0FDF4; border:1px solid #86EFAC; color:#166534; }
+    .p-bg { background:#F8FAFC; padding:60px 0; border-top:1px solid #E2E8F0; }
+    .row { background:#FFF; border:1px solid #E2E8F0; border-radius:10px; padding:25px; margin-bottom:20px; border-top:4px solid #0B5294; }
+    .row h3 { color:#0B5294; margin-bottom:8px; font-size:1.25rem; border-bottom:2px solid #F1F5F9; padding-bottom:4px; }
+    .row h4 { color:#2EAF4A; margin:10px 0 4px 0; font-size:0.9rem; text-transform:uppercase; font-weight:bold; }
+    .row p { color:#475569; font-size:0.9rem; }
+    .pills { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:10px; }
+    .pill { background:#F8FAFC; padding:8px 16px; border-radius:20px; font-weight:bold; font-size:0.8rem; color:#0B5294; border:1px solid #E2E8F0; }
+    .pill.c { color:#475569; background:#FFF; }
+    .c-card { display:flex; flex-wrap:wrap; background:#FFF; border-radius:12px; border:1px solid #E2E8F0; overflow:hidden; }
+    .info { background:linear-gradient(135deg, #0B5294 0%, #052E54 100%); color:#FFF; padding:30px; flex:1; min-width:280px; }
+    .info-r { margin-bottom:15px; padding:10px; background:rgba(255,255,255,0.04); border-radius:6px; border-left:3px solid #2EAF4A; }
+    .form { padding:30px; flex:1.2; min-width:280px; }
+    .field { width:100%; padding:10px; border:1px solid #CBD5E1; border-radius:6px; margin-bottom:12px; font-size:0.85rem; }
+    .s-btn { width:100%; background:#25D366; color:#FFF; border:none; padding:12px; border-radius:6px; font-weight:bold; cursor:pointer; }
+    footer { background:#0F172A; color:#64748B; text-align:center; padding:20px; font-size:0.8rem; }
+    @media (max-width:768px) { .hero-flex, .c-card { flex-direction:column; } .menu { display:none; } }
+  </style>
 </head>
-<body style="margin:0; padding:0; font-family:sans-serif; background-color:#F8FAFC; color:#1E293B;">
+<body>
 
-  <!-- ENCABEZADO CON LOGOTIPO -->
-  <table width="100%" bgcolor="#FFFFFF" style="border-bottom:2px solid #E2E8F0; padding:15px 0;">
-    <tr>
-      <td align="center">
-        <table width="1100">
-          <tr>
-            <td width="50">
-              <div style="width:35px; height:35px; background:#0B5294; border-radius:8px; border-bottom:5px solid #2EAF4A;"></div>
-            </td>
-            <td style="font-size:1.5rem; font-weight:bold; color:#0B5294;">
-              IT<span style="color:#2EAF4A;">GREEN</span> SOLUTIONS
-            </td>
-            <td align="right" style="font-weight:bold; font-size:0.95rem;">
-              <a href="#nosotros" style="color:#1E293B; text-decoration:none; margin-right:20px;">Nosotros</a>
-              <a href="#servicios" style="color:#1E293B; text-decoration:none; margin-right:20px;">Servicios</a>
-              <a href="#aliados" style="color:#1E293B; text-decoration:none; margin-right:20px;">Aliados</a>
-              <a href="#contacto" style="color:#1E293B; text-decoration:none;">Contacto</a>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
+  <header>
+    <div class="container navbar">
+      <a href="#" class="logo">IT<span>GREEN</span> SOLUTIONS</a>
+      <ul class="menu">
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#aliados">Aliados</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
 
-  <!-- SECCIÓN PRINCIPAL / HERO -->
-  <table width="100%" bgcolor="#FFFFFF" style="padding:60px 0; border-bottom:1px solid #E2E8F0;">
-    <tr>
-      <td align="center">
-        <table width="1100">
-          <tr>
-            <td width="650" valign="top">
-              <p style="color:#2EAF4A; font-weight:bold; font-size:0.85rem; letter-spacing:1px; margin-bottom:10px;">ESLOGAN INSTITUCIONAL</p>
-              <h1 style="font-size:2.8rem; color:#0B5294; margin-bottom:15px; line-height:1.2;">Liderando soluciones tecnológicas <span style="color:#2EAF4A;">sustentables con el ecosistema</span></h1>
-              <p style="color:#475569; font-size:1.1rem; margin-bottom:25px;">Garantizamos la convergencia perfecta entre potencia digital e ingeniería limpia. Diseñamos infraestructura de misiones críticas protegidas ante cualquier eventualidad energética en el mercado ecuatoriano.</p>
-              <a href="#contacto" style="display:inline-block; background:#2EAF4A; color:#FFFFFF; padding:14px 30px; border-radius:30px; text-decoration:none; font-weight:bold;">Solicitar Asesoría Técnica</a>
-            </td>
-            <td width="450" valign="top" align="right">
-              <div style="background:#0B5294; border-radius:16px; padding:30px; color:#FFFFFF; border-left:8px solid #2EAF4A; text-align:left; width:380px;">
-                <h3 style="color:#2EAF4A; margin-bottom:10px; font-size:1.3rem;">Fusión Tecnológica</h3>
-                <p style="font-size:0.9rem; opacity:0.9; line-height:1.5;">Datacenters corporativos y almacenamiento redundante blindados mediante sistemas de energía fotovoltaica híbrida avanzada de Growatt y Huawei.</p>
-                <p style="margin-top:15px; font-weight:bold; border-top:1px solid rgba(255,255,255,0.2); padding-top:10px; font-size:0.8rem;">INFRAESTRUCTURA IT + ENERGÍA SOLAR</p>
-              </div>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
+  <section class="hero">
+    <div class="container hero-flex">
+      <div class="hero-text">
+        <p style="color:#2EAF4A; font-weight:bold; font-size:0.8rem; margin-bottom:5px;">ESLOGAN INSTITUCIONAL</p>
+        <h1>Liderando soluciones tecnologicas <span>sustentables con el ecosistema</span></h1>
+        <p style="color:#475569; font-size:0.95rem;">Garantizamos la convergencia perfecta entre potencia digital e ingenieria limpia. Disenamos infraestructura de misiones criticas protegidas ante cualquier eventualidad energetica en el mercado ecuatoriano.</p>
+        <a href="#contacto" class="btn" style="margin-top:15px;">Solicitar Asesoria Tecnica</a>
+      </div>
+      <div class="hero-img">
+        <div class="panel">
+          <h3>Fusion Tecnopolitana</h3>
+          <p style="font-size:0.85rem; opacity:0.9;">Datacenters corporativos y almacenamiento redundante blindados mediante sistemas de energia fotovoltaica hibrida avanzada de Growatt y Huawei.</p>
+          <p style="margin-top:10px; font-weight:bold; font-size:0.8rem;">INFRAESTRUCTURA IT + ENERGIA SOLAR</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- SECCIÓN QUIENES SOMOS -->
-  <table width="100%" style="padding:60px 0;">
-    <tr>
-      <td align="center">
-        <table width="1100" id="nosotros">
-          <tr>
-            <td valign="top">
-              <h2 style="color:#0B5294; margin-bottom:20px; font-size:2rem;">¿Quiénes Somos?</h2>
-              <p style="color:#475569; margin-bottom:15px; font-size:1.05rem;"><strong>ITGREEN SOLUTIONS</strong> es una empresa de consultoría y comercialización de productos de tecnologías de información y renovables, especializadas en soluciones innovadoras basadas en la correcta aplicación para empresas privadas y de pública sean estas pequeñas, medianas y grandes.</p>
-              <p style="color:#475569; margin-bottom:15px; font-size:1.05rem;">Somos una empresa formada desde el 2025, que contamos con el personal calificado y la experiencia en el mercado, en el desarrollo e implementaciones de proyectos tecnológicos y con soluciones renovables en el uso de la energía. Aplicando las mejores prácticas para hacer que su negocio sea más competitivo, rentable, reduciendo costos y optimizando recursos y preocupándonos en el medio ambiente.</p>
-              <p style="color:#475569; font-size:1.05rem;">El éxito de ITGREEN SOLUTIONS reside en su capacidad para adaptarse al cliente, dando siempre un trato personalizado y estudiando las posibilidades más adecuadas en cada proyecto. El objetivo de ITGREEN SOLUTIONS, es siempre cumplir con las expectativas de nuestros clientes en cada proyecto, por lo que proporcionamos un servicio con un alto sentido de responsabilidad y compromiso.</p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <table width="100%" style="margin-top:20px;" cellspacing="10">
-                <tr>
-                  <td bgcolor="#FFFFFF" style="padding:20px; border-radius:12px; border-left:5px solid #2EAF4A; box-shadow:0 2px 8px rgba(0,0,0,0.02); font-size:0.9rem; color:#475569;">
-                    <strong style="color:#0B5294; display:block; margin-bottom:5px;">Adaptabilidad Real</strong>
-                    Nuestro éxito reside en la capacidad para adaptarnos al cliente, brindando un trato proactivo y personalizado en Guayaquil.
-                  </td>
-                  <td bgcolor="#FFFFFF" style="padding:20px; border-radius:12px; border-left:5px solid #0B5294; box-shadow:0 2px 8px rgba(0,0,0,0.02); font-size:0.9rem; color:#475569;">
-                    <strong style="color:#0B5294; display:block; margin-bottom:5px;">Compromiso Total</strong>
-                    Cumplimos las expectativas de cada proyecto tecnológico con responsabilidad ambiental estricta.
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div style="padding:20px; border-radius:12px; background:#FEF2F2; border:1px solid #FCA5A5; color:#991B1B; margin-top:20px; font-size:0.95rem;">
-                <strong>El Punto de Dolor Corporativo:</strong> ¿Cuánto le cuesta a tu empresa quedarse sin luz y sin sistema al mismo tiempo? En Ecuador, un apagón no solo te deja a oscuras: apaga tus servidores, tumba tu red, incomunica a tu equipo y pone en riesgo tus datos más valiosos.
-              </div>
-              <div style="padding:20px; border-radius:12px; background:#F0FDF4; border:1px solid #86EFAC; color:#166534; margin-top:15px; font-size:0.95rem;">
-                <strong>Nuestra Respuesta de Ingeniería:</strong> "La energía fotovoltaica es el motor que mantiene tu infraestructura IT viva. Diseñamos entornos tecnológicos protegidos, respaldados por energía solar inteligente para que tu negocio siga facturando 24/7."
-              </div>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
+  <section id="nosotros" class="section">
+    <div class="container">
+      <h2 style="color:#0B5294; margin-bottom:15px; font-size:1.8rem;">Quienes Somos</h2>
+      <p style="color:#475569; margin-bottom:10px; font-size:0.95rem;"><strong>ITGREEN SOLUTIONS</strong> es una empresa de consultoria y comercializacion de productos de tecnologias de informacion y renovables, especializadas en soluciones innovadoras basadas en la correcta aplicacion para empresas privadas y de publica sean estas pequenas, medianas y grandes desde el 2025.</p>
+      <p style="color:#475569; margin-bottom:10px; font-size:0.95rem;">Contamos con el personal calificado y la experiencia en el mercado para hacer que su negocio sea mas competitivo, rentable, reduciendo costos, optimizando recursos y preocupandonos en el medio ambiente.</p>
+      <p style="color:#475569; font-size:0.95rem;">Nuestro exito reside en la capacidad para adaptarse al cliente, dando siempre un trato personalizado y estudiando las posibilidades mas adecuadas con un alto sentido de responsabilidad y compromiso.</p>
+      
+      <div class="pane-r block-pane">
+        <strong>El Punto de Dolor Corporativo:</strong> Cuanto le cuesta a tu empresa quedarse sin luz y sin sistema al mismo tiempo? En Ecuador, un apagon no solo te deja a oscuras: apaga tus servidores, tumba tu red e incomunica a tu equipo.
+      </div>
+      <div class="pane-g block-pane">
+        <strong>Nuestra Respuesta de Ingenieria:</strong> La energia fotovoltaica es el motor que mantiene tu infraestructura IT viva. Disenamos entornos tecnologicos protegidos por energia solar inteligente para facturar 24/7.
+      </div>
+    </div>
+  </section>
 
-  <!-- SECCIÓN PORTAFOLIO -->
-  <table width="100%" bgcolor="#F8FAFC" style="padding:60px 0; border-top:1px solid #E2E8F0;" id="servicios">
-    <tr>
-      <td align="center">
-        <table width="1100">
-          <tr>
-            <td align="center">
-              <h2 style="font-size:2.4rem; color:#0B5294; margin-bottom:10px;">Portafolio Especializado de Soluciones IT</h2>
-              <p style="color:#475569; margin-bottom:40px;">Estructura detallada y especificaciones técnicas de tu portafolio empresarial comercial.</p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <!-- Servicio 1 -->
-              <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:12px; padding:30px; margin-bottom:25px;">
-                <h3 style="color:#0B5294; margin-bottom:10px; font-size:1.35rem; border-bottom:2px solid #F1F5F9; padding-bottom:5px;">Virtualización de Entornos</h3>
-                <p style="color:#475569; font-size:0.95rem; margin-bottom:15px;">Ajustamos infraestructuras tradicionales a esquemas dinámicos bajo demanda del plan de negocios en el área IT.</p>
-                <strong style="color:#2EAF4A; font-size:0.9rem; text-transform:uppercase;">Modelos de Implementación e Ingeniería:</strong>
-                <p style="color:#334155; font-size:0.9rem; margin-top:5px;">• Sistemas Convergentes con Dell y HP.<br>• Sistemas Hiperconvergentes con VSan-VMware, Nutanix, Simplivity-HP.<br>• Sistemas de Virtualización de servidores con VMware, Hyper-V, Proxmox y KVM.<br>• Sistemas de Virtualización de escritorios VDI con Horizon-VMware.</p>
-                <strong style="color:#2EAF4A; font-size:0.9rem; text-transform:uppercase; display:block; margin-top:15px;">Beneficios Estratégicos:</strong>
-                <p style="color:#334155; font-size:0.9rem; margin-top:5px;">• Disminuye el número de servidores físicos y el espacio en el centro de datos (Ahorro de mantenimiento y energía).<br>• Alta disponibilidad en el servicio y recuperación proactiva ante caídas corporativas en pocos minutos.<br>• Fácil aprovisionamiento de recursos y balanceo de carga ágil.</p>
-              </div>
+  <section id="servicios" class="p-bg">
+    <div class="container">
+      <h2 style="text-align:center; font-size:2rem; color:#0B5294; margin-bottom:5px;">Portafolio Especializado de Soluciones IT</h2>
+      <p style="text-align:center; color:#475569; margin-bottom:30px; font-size:0.9rem;">Detalle de ingenieria, marcas y especificaciones tecnicas extraidas de tu documentacion corporativa.</p>
+      
+      <div class="row">
+        <h3>Virtualizacion de Entornos</h3>
+        <p>Ajustamos infraestructuras tradicionales a esquemas dinamicos bajo demanda del plan de negocios corporativo.</p>
+        <h4>Modelos de Implementacion:</h4>
+        <p>Sistemas Convergentes con Dell y HP.<br>Hiperconvergentes con VSan-Vmware, Nutanix, Simplivity-HP.<br>Virtualizacion de servidores con Vmware, Hyper-V, Proxmox y KVM.<br>Virtualizacion de escritorios VDI con Horizon-Vmware.</p>
+        <h4>Beneficios:</h4>
+        <p>Disminuye servidores fisicos y espacio en datacenter (Ahorro de energia).<br>Alta disponibilidad y recuperacion ante caidas en pocos minutos.</p>
+      </div>
 
-              <!-- Servicio 2 -->
-              <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:12px; padding:30px; margin-bottom:25px;">
-                <h3 style="color:#0B5294; margin-bottom:10px; font-size:1.35rem; border-bottom:2px solid #F1F5F9; padding-bottom:5px;">Almacenamiento y Respaldos</h3>
-                <p style="color:#475569; font-size:0.95rem; margin-bottom:15px;">Proveemos soluciones de almacenamiento masivo y resguardo crítico con el aval estricto de marcas reconocidas.</p>
-                <strong style="color:#2EAF4A; font-size:0.9rem; text-transform:uppercase;">Configuraciones Soportadas:</strong>
+      <div class="row">
+        <h3>Almacenamiento y Respaldos</h3>
+        <p>Proveemos soluciones de almacenamiento masivo y resguardo critico con el aval estricto de marcas reconocidas.</p>
+        <h4>Configuraciones:</h4>
+        <p>Almacenamiento DAS, iSCSI, Canal de Fibra, virtual y cintas para backup.<br>Software para replicas, deduplicacion y compresion de respaldos.<br>Infraestructura de discos de estado solido (SSD), tradicionales (HDD) e hibridos (SSHD).<br>Marcas Oficiales: HP, EMC y VEEAM en funcion de tu RTO y RPO.</p>
+      </div>
+
+      <div class="row">
+        <h3>Redes y Seguridad Informatica</h3>
+        <p>Disenamos e implementamos redes eficientes y perimetraje seguro de datos a traves de conexiones robustas.</p>
+        <h4>Ciberseguridad Avanzada:</h4>
+        <p>Firewalls: WebFilter, IPS, Antispam, Antivirus, Controles de Aplicacion y WAF.<br>Administracion de ancho de banda y balanceo de redes WAN activo-activo.<br>Switches Capa 2 y Capa 3 PoE, Access Point Mesh y Controladoras en alta disponibilidad.<br>Soluciones de telefonia, chat y videoconferencias sobre IP movil.</p>
+      </div>
+
+      <div class="row">
+        <h3>Hardware Corporativo y Soporte Tecnico</h3>
+        <p>Provision y mantenimiento proactivo preventivo y correctivo de hardware informatico empresarial.</p>
+        <h4>Equipamiento:</h4>
+        <p>Computadoras de escritorio corporativas de torre, Slim y micro PC.<br>Laptops corporativas livianas, ultra livianas e industriales de alto rendimiento.<br>Terminales de escritorio virtuales optimizados para Horizon y Citrix.<br>Marcas: HP, DELL, LG, SAMSUNG, AOC, ACER.</p>
+      </div>
+
+      <div class="row">
+        <h3>Control de Acceso y CCTV</h3>
+        <p>Sistemas de seguridad para auditar flujos, horarios e ingresos de personal tanto interno como externo.</p>
+        <h4>Monitoreo:</h4>
