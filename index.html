@@ -4,145 +4,102 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ITGREEN SOLUTIONS | Soluciones Tecnológicas Sustentables</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: sans-serif; color: #1E293B; background-color: #F8FAFC; line-height: 1.6; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-    
-    /* ENCABEZADO Y MENU */
-    header { background: #FFFFFF; border-bottom: 2px solid #E2E8F0; position: sticky; top: 0; z-index: 1000; padding: 15px 0; }
-    .navbar { display: flex; justify-content: space-between; align-items: center; }
-    .logo-box { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .logo-graphic { width: 35px; height: 35px; background: #0B5294; border-radius: 8px; border-bottom: 5px solid #2EAF4A; }
-    .logo-text { font-size: 1.4rem; font-weight: bold; color: #0B5294; }
-    .logo-text span { color: #2EAF4A; }
-    .nav-menu { display: flex; list-style: none; gap: 20px; }
-    .nav-menu a { text-decoration: none; color: #1E293B; font-weight: bold; font-size: 0.9rem; }
-    .nav-menu a:hover { color: #2EAF4A; }
-
-    /* SECCION HERO */
-    .hero { background: #FFFFFF; padding: 80px 0; border-bottom: 1px solid #E2E8F0; }
-    .hero-wrapper { display: flex; align-items: center; gap: 40px; }
-    .hero-content { flex: 1.2; }
-    .hero-content h1 { font-size: 2.6rem; color: #0B5294; line-height: 1.2; margin-bottom: 15px; }
-    .hero-content h1 span { color: #2EAF4A; }
-    .hero-content p { color: #475569; font-size: 1.05rem; margin-bottom: 25px; }
-    .hero-graphic { flex: 0.8; }
-    .industrial-panel { background: #0B5294; border-radius: 16px; padding: 30px; color: #FFFFFF; border-left: 8px solid #2EAF4A; }
-    .industrial-panel h3 { color: #2EAF4A; margin-bottom: 10px; font-size: 1.3rem; }
-
-    /* QUIENES SOMOS */
-    .padding-block { padding: 80px 0; }
-    .about-wrapper { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; }
-    .about-text p { color: #475569; margin-bottom: 15px; }
-    .about-card { background: #F8FAFC; padding: 25px; border-radius: 12px; border-left: 5px solid #2EAF4A; margin-bottom: 15px; }
-    .about-card h4 { color: #0B5294; margin-bottom: 5px; }
-    .pane-box { padding: 25px; border-radius: 12px; margin-top: 20px; }
-    .pane-alert { background: #FEF2F2; border: 1px solid #FCA5A5; color: #991B1B; }
-    .pane-success { background: #F0FDF4; border: 1px solid #86EFAC; color: #166534; }
-
-    /* PORTAFOLIO */
-    .portfolio-bg { background: #F8FAFC; padding: 80px 0; }
-    .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
-    .portfolio-card { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
-    .card-visual-header { height: 120px; background: #0B5294; color: #FFFFFF; padding: 20px; display: flex; flex-direction: column; justify-content: center; }
-    .card-visual-header.solar-theme { background: #1E293B; border-bottom: 4px solid #2EAF4A; }
-    .card-visual-header h4 { font-size: 1.15rem; font-weight: bold; }
-    .card-body { padding: 25px; flex-grow: 1; }
-    .card-body h3 { color: #0B5294; margin-bottom: 8px; font-size: 1.2rem; }
-    .card-body p { color: #475569; font-size: 0.88rem; margin-bottom: 15px; }
-    details { margin-top: 10px; }
-    summary { background: #F1F5F9; color: #0B5294; padding: 10px; border-radius: 6px; font-weight: bold; cursor: pointer; text-align: center; border: 1px solid #CBD5E1; font-size: 0.85rem; }
-    .word-content-expanded { padding: 15px 5px 0 5px; border-top: 1px dashed #E2E8F0; margin-top: 10px; font-size: 0.85rem; }
-    .word-content-expanded h5 { color: #0B5294; margin: 10px 0 5px 0; text-transform: uppercase; font-size: 0.8rem; }
-    .word-content-expanded ul { list-style: none; }
-    .word-content-expanded ul li { margin-bottom: 4px; }
-    .word-content-expanded ul li::before { content: "✓ "; color: #2EAF4A; font-weight: bold; }
-
-    /* MARCAS */
-    .pill-flex { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 15px; }
-    .pill { background: #F8FAFC; padding: 10px 20px; border-radius: 30px; font-weight: bold; font-size: 0.85rem; color: #0B5294; border: 1px solid #E2E8F0; }
-    .pill.client { color: #475569; background: #FFFFFF; }
-
-    /* CONTACTO */
-    .contact-card { display: grid; grid-template-columns: 1fr 1.2fr; background: #FFFFFF; border-radius: 16px; border: 1px solid #E2E8F0; overflow: hidden; }
-    .info-pane { background: linear-gradient(135deg, #0B5294 0%, #052E54 100%); color: #FFFFFF; padding: 40px; }
-    .info-pane h3 { font-size: 1.6rem; margin-bottom: 12px; }
-    .info-row { margin-bottom: 18px; background: rgba(255,255,255,0.04); padding: 12px; border-radius: 8px; border-left: 4px solid #2EAF4A; }
-    .form-pane { padding: 40px; }
-    .field { width: 100%; padding: 12px; border: 1px solid #CBD5E1; border-radius: 8px; margin-bottom: 15px; font-size: 0.9rem; }
-    .submit-btn { width: 100%; background: #25D366; color: white; border: none; padding: 15px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 1rem; }
-    footer { background: #0F172A; color: #64748B; text-align: center; padding: 25px 0; font-size: 0.8rem; }
-    @media (max-width: 992px) { .hero-wrapper, .about-wrapper, .contact-card { grid-template-columns: 1fr; } .nav-menu { display: none; } }
-  </style>
 </head>
-<body>
+<body style="margin:0; padding:0; box-sizing:border-box; font-family:sans-serif; color:#0F172A; background-color:#F8FAFC; line-height:1.6;">
 
-  <header>
-    <div class="container navbar">
-      <a href="#" class="logo-box">
-        <div class="logo-graphic"></div>
-        <div class="logo-text">IT<span>GREEN</span> SOLUTIONS</div>
+  <!-- ENCABEZADO CON LOGO CORPORATIVO VECTORIAL EN LA ESQUINA SUPERIOR IZQUIERDA -->
+  <header style="background:#FFFFFF; border-bottom:2px solid #E2E8F0; position:sticky; top:0; z-index:1000; padding:15px 20px;">
+    <div style="max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center;">
+      <a href="#" style="display:flex; align-items:center; gap:10px; text-decoration:none;">
+        <!-- Logotipo Hecho por Código en la Esquina Izquierda -->
+        <div style="width:35px; height:35px; background:#0B5294; border-radius:8px; border-bottom:5px solid #2EAF4A;"></div>
+        <div style="font-size:1.4rem; font-weight:bold; color:#0B5294; font-family:sans-serif;">IT<span style="color:#2EAF4A;">GREEN</span> SOLUTIONS</div>
       </a>
-      <ul class="nav-menu">
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#aliados">Aliados</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
+      <nav>
+        <ul style="display:flex; list-style:none; gap:20px;">
+          <li><a href="#nosotros" style="text-decoration:none; color:#1E293B; font-weight:bold; font-size:0.9rem;">Nosotros</a></li>
+          <li><a href="#servicios" style="text-decoration:none; color:#1E293B; font-weight:bold; font-size:0.9rem;">Servicios</a></li>
+          <li><a href="#aliados" style="text-decoration:none; color:#1E293B; font-weight:bold; font-size:0.9rem;">Aliados</a></li>
+          <li><a href="#contacto" style="text-decoration:none; color:#1E293B; font-weight:bold; font-size:0.9rem;">Contacto</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <section id="hero" class="hero">
-    <div class="container hero-wrapper">
-      <div class="hero-content">
-        <p style="color:#2EAF4A; font-weight:bold; font-size:0.85rem; text-transform:uppercase; margin-bottom:10px;">ESLOGAN INSTITUCIONAL</p>
-        <h1>Liderando soluciones tecnológicas <span>sustentables con el ecosistema</span></h1>
-        <p>Garantizamos la convergencia perfecta entre potencia digital e ingeniería limpia. Diseñamos infraestructura de misiones críticas protegidas ante cualquier eventualidad energética en el mercado ecuatoriano.</p>
-        <a href="#contacto" class="btn">Solicitar Asesoría Técnica</a>
+  <!-- PÁGINA PRINCIPAL / HERO CON CONTENEDOR GRÁFICO ATRACTIVO -->
+  <section style="background:#FFFFFF; padding:80px 20px; border-bottom:1px solid #E2E8F0;">
+    <div style="max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:40px;">
+      <div style="flex:1; min-width:300px;">
+        <p style="color:#2EAF4A; font-weight:bold; font-size:0.85rem; text-transform:uppercase; margin-bottom:10px; letter-spacing:1px;">ESLOGAN INSTITUCIONAL</p>
+        <h1 style="font-size:2.8rem; color:#0B5294; line-height:1.2; margin-bottom:15px; font-weight:bold;">Liderando soluciones tecnológicas <span style="color:#2EAF4A;">sustentables con el ecosistema</span></h1>
+        <p style="color:#475569; font-size:1.05rem; margin-bottom:30px;">Garantizamos la convergencia perfecta entre potencia digital e ingeniería limpia. Diseñamos infraestructura de misiones críticas protegidas ante cualquier eventualidad energética en el mercado ecuatoriano.</p>
+        <a href="#contacto" style="display:inline-block; background:#2EAF4A; color:#FFFFFF; padding:14px 30px; border-radius:30px; text-decoration:none; font-weight:bold; box-shadow:0 4px 15px rgba(46,175,74,0.2);">Solicitar Asesoría Técnica</a>
       </div>
-      <div class="hero-graphic">
-        <div class="industrial-panel">
-          <h3>Fusión Tecnológica</h3>
-          <p>Datacenters corporativos y almacenamiento redundante blindados mediante sistemas de energía fotovoltaica híbrida avanzada de Growatt y Huawei.</p>
-          <p style="margin-top:15px; font-weight:bold; border-top:1px solid rgba(255,255,255,0.2); padding-top:10px;">🏢 INFRAESTRUCTURA IT + ☀️ ENERGÍA SOLAR</p>
+      <!-- Gráfica Atractiva de Fusión Datacenter + Red Energética Solar -->
+      <div style="flex:0.8; min-width:300px;">
+        <div style="background:#0B5294; border-radius:20px; padding:35px; color:#FFFFFF; border-left:8px solid #2EAF4A; box-shadow:0 15px 30px rgba(0,0,0,0.05);">
+          <h3 style="color:#2EAF4A; margin-bottom:10px; font-size:1.4rem; font-weight:bold;">Fusión Tecnológica</h3>
+          <p style="font-size:0.9rem; opacity:0.9; line-height:1.5;">Datacenters corporativos y almacenamiento redundante blindados mediante sistemas de energía fotovoltaica híbrida avanzada de Growatt y Huawei.</p>
+          <div style="margin-top:20px; font-weight:bold; border-top:1px solid rgba(255,255,255,0.2); padding-top:15px; font-size:0.85rem; letter-spacing:0.5px;">🏢 INFRAESTRUCTURA IT + ☀️ ENERGÍA SOLAR</div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="nosotros" class="padding-block">
-    <div class="container about-wrapper">
-      <div class="about-text">
-        <h2 style="color:#0B5294; margin-bottom:20px; font-size:2rem;">¿Quiénes Somos?</h2>
-        <p><strong>ITGREEN SOLUTIONS</strong> es una empresa de consultoría y comercialización de productos de tecnologías de información y renovables, especializadas en soluciones innovadoras basadas en la correcta aplicación para empresas privadas y de pública sean estas pequeñas, medianas y grandes.</p>
-        <p style="margin-top:15px;">Somos una empresa formada desde el 2025, que contamos con el personal calificado y la experiencia en el mercado, en el desarrollo e implementaciones de proyectos tecnológicos y con soluciones renovables en el uso de la energía. Aplicando las mejores prácticas para hacer que su negocio sea más competitivo, rentable, reduciendo costos y optimizando recursos y preocupándonos en el medio ambiente.</p>
-        <p style="margin-top:15px;">El éxito de ITGREEN SOLUTIONS reside en su capacidad para adaptarse al cliente, dando siempre un trato personalizado y estudiando las posibilidades más adecuadas in cada proyecto. El objetivo de ITGREEN SOLUTIONS, es siempre cumplir con las expectativas de nuestros clientes en cada proyecto.</p>
+  <!-- SECCIÓN QUIENES SOMOS -->
+  <section id="nosotros" style="padding:80px 20px;">
+    <div style="max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; gap:40px;">
+      <div style="flex:1.2; min-width:300px;">
+        <h2 style="color:#0B5294; margin-bottom:20px; font-size:2rem; font-weight:bold;">¿Quiénes Somos?</h2>
+        <p style="color:#475569; margin-bottom:15px;"><strong>ITGREEN SOLUTIONS</strong> es una empresa de consultoría y comercialización de productos de tecnologías de información y renovables, especializadas en soluciones innovadoras basadas en la correcta aplicación para empresas privadas y de pública sean estas pequeñas, medianas y grandes.</p>
+        <p style="color:#475569; margin-bottom:15px;">Somos una empresa formada desde el 2025, que contamos con el personal calificado y la experiencia en el mercado, en el desarrollo e implementaciones de proyectos tecnológicos y con soluciones renovables en el uso de la energía. Aplicando las mejores prácticas para hacer que su negocio sea más competitivo, rentable, reduciendo costos y optimizando recursos y preocupándonos en el medio ambiente.</p>
+        <p style="color:#475569;">El éxito de ITGREEN SOLUTIONS reside en su capacidad para adaptarse al cliente, dando siempre un trato personalizado y estudiando las posibilidades más adecuadas en cada proyecto. El objetivo de ITGREEN SOLUTIONS, es siempre cumplir con las expectativas de nuestros clientes en cada proyecto, por lo que proporcionamos un servicio con un alto sentido de responsabilidad y compromiso.</p>
       </div>
-      <div>
-        <div class="about-card">
-          <h4>Adaptabilidad Real</h4>
-          <p>Nuestro éxito reside en la capacidad para adaptarnos al cliente, brindando un trato proactivo y personalizado en Guayaquil.</p>
+      <div style="flex:0.8; min-width:300px; display:flex; flex-direction:column; gap:15px;">
+        <div style="background:#FFFFFF; padding:25px; border-radius:12px; border-left:5px solid #2EAF4A; box-shadow:0 2px 10px rgba(0,0,0,0.02);">
+          <h4 style="color:#0B5294; margin-bottom:5px; font-weight:bold;">Adaptabilidad Real</h4>
+          <p style="color:#475569; font-size:0.88rem;">Nuestro éxito reside en la capacidad para adaptarnos al cliente, brindando un trato proactivo y personalizado en Guayaquil.</p>
         </div>
-        <div class="about-card" style="border-left-color:#0B5294;">
-          <h4>Compromiso Total</h4>
-          <p>Cumplimos las expectativas de cada proyecto tecnológico con responsabilidad ambiental estricta.</p>
+        <div style="background:#FFFFFF; padding:25px; border-radius:12px; border-left:5px solid #0B5294; box-shadow:0 2px 10px rgba(0,0,0,0.02);">
+          <h4 style="color:#0B5294; margin-bottom:5px; font-weight:bold;">Compromiso Total</h4>
+          <p style="color:#475569; font-size:0.88rem;">Cumplimos las expectativas de cada proyecto tecnológico con responsabilidad ambiental estricta.</p>
         </div>
       </div>
     </div>
     
-    <div class="container">
-      <div class="pane-box pane-alert">
-        <strong>⚠️ El Punto de Dolor:</strong> ¿Cuánto le cuesta a tu empresa quedarse sin luz y sin sistema al mismo tiempo? En Ecuador, un apagón no solo te deja a oscuras: apaga tus servidores, tumba tu red, incomunica a tu equipo y pone en riesgo tus datos más valiosos.
+    <!-- PANELES DE DOLOR Y CONTEXTO EN ENERGÍA -->
+    <div style="max-width:1200px; margin:30px auto 0 auto; display:flex; flex-direction:column; gap:20px;">
+      <div style="padding:25px; border-radius:12px; background:#FEF2F2; border:1px solid #FCA5A5; color:#991B1B;">
+        <strong>⚠️ El Punto de Dolor Corporativo:</strong> ¿Cuánto le cuesta a tu empresa quedarse sin luz y sin sistema al mismo tiempo? En Ecuador, un apagón no solo te deja a oscuras: apaga tus servidores, tumba tu red, incomunica a tu equipo y pone en riesgo tus datos más valiosos.
       </div>
-      <div class="pane-box pane-success">
-        <strong>🌱 Nuestra Respuesta:</strong> "La energía fotovoltaica es el motor que mantiene tu infraestructura IT viva. Diseñamos entornos tecnológicos protegidos, respaldados por energía solar inteligente para que tu negocio siga facturando 24/7."
+      <div style="padding:25px; border-radius:12px; background:#F0FDF4; border:1px solid #86EFAC; color:#166534;">
+        <strong>🌱 Nuestra Respuesta de Ingeniería:</strong> "La energía fotovoltaica es el motor que mantiene tu infraestructura IT viva. Diseñamos entornos tecnológicos protegidos, respaldados por energía solar inteligente para que tu negocio siga facturando 24/7."
       </div>
     </div>
   </section>
 
-  <section id="servicios" class="portfolio-bg">
-    <div class="container">
-      <h2 class="section-title">Portafolio Especializado de <span>Soluciones IT</span></h2>
-      <p class="section-subtitle">Haz clic en el botón de cualquiera de las tarjetas de abajo para desplegar toda la información y especificaciones técnicas de tu Word.</p>
+  <!-- SECCIÓN PORTAFOLIO INTERACTIVO (CLIC PARA DESPLEGAR DATOS DE WORD) -->
+  <section id="soluciones" style="background:#F8FAFC; padding:80px 20px;">
+    <div style="max-width:1200px; margin:0 auto;">
+      <h2 style="text-align:center; font-size:2.4rem; color:#0B5294; margin-bottom:10px; font-weight:bold;">Portafolio Especializado de <span style="color:#2EAF4A;">Soluciones IT</span></h2>
+      <p style="text-align:center; color:#475569; max-width:700px; margin:0 auto 50px auto; font-size:1rem;">Haz clic en el botón gris de cualquiera de las tarjetas de abajo para desplegar toda la información y especificaciones técnicas de tu documento de Word.</p>
       
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(340px, 1fr)); gap:25px;">
+        
+        <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:14px; overflow:hidden; display:flex; flex-direction:column; box-shadow:0 4px 10px rgba(0,0,0,0.01);">
+          <div style="height:110px; background:#0B5294; color:#FFFFFF; padding:20px; display:flex; flex-direction:column; justify-content:center;">
+            <h4 style="font-size:1.15rem; font-weight:bold;">[ VIRTUALIZACIÓN ]</h4>
+          </div>
+          <div style="padding:25px; flex-grow:1;">
+            <h3 style="color:#0B5294; margin-bottom:8px; font-size:1.2rem; font-weight:bold;">Virtualización de Entornos</h3>
+            <p style="color:#475569; font-size:0.88rem; margin-bottom:15px;">Ajustamos infraestructuras tradicionales a esquemas dinámicos bajo demanda del plan de negocios.</p>
+            <details style="margin-top:10px;">
+              <summary style="background:#F1F5F9; color:#0B5294; padding:10px; border-radius:6px; font-weight:bold; cursor:pointer; text-align:center; border:1px solid #CBD5E1; font-size:0.85rem;">Ver Detalles de Word</summary>
+              <div style="padding:15px 5px 0 5px; border-top:1px dashed #E2E8F0; margin-top:10px; font-size:0.85rem;">
+                <h5 style="color:#0B5294; margin-bottom:5px; font-weight:bold; text-transform:uppercase;">Modelos de Implementación:</h5>
+                <p>• Sistemas Convergentes con Dell y HP.<br>• Hiperconvergentes con VSan-Vmware, Nutanix, Simplivity-HP.<br>• Servidores virtuales con Vmware, Hyper-V, Proxmox y KVM.<br>• Escritorios Virtuales VDI con Horizon-Vmware.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
