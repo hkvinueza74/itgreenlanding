@@ -1,0 +1,85 @@
+/* --- HOJA DE ESTILOS PROFESIONAL INDUSTRIAL ITGREEN SOLUTIONS --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #F8FAFC; color: #1E293B; line-height: 1.6; }
+.container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+
+/* NAVBAR SUPERIOR */
+header { background: #FFFFFF; border-bottom: 2px solid #E2E8F0; position: sticky; top: 0; z-index: 1000; padding: 15px 0; }
+.navbar { display: flex; justify-content: space-between; align-items: center; }
+.logo-box { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo-graphic { width: 35px; height: 35px; background: #0B5294; border-radius: 8px; border-bottom: 5px solid #2EAF4A; }
+.logo-text { font-size: 1.4rem; font-weight: bold; color: #0B5294; }
+.logo-text span { color: #2EAF4A; }
+.nav-menu { display: flex; list-style: none; gap: 20px; }
+.nav-menu a { text-decoration: none; color: #1E293B; font-weight: bold; font-size: 0.9rem; transition: color 0.2s; }
+.nav-menu a:hover { color: #2EAF4A; }
+
+/* SECCION HERO / BIENVENIDA */
+.hero { background: #FFFFFF; padding: 80px 0; border-bottom: 1px solid #E2E8F0; }
+.hero-wrapper { display: flex; flex-wrap: wrap; align-items: center; gap: 40px; }
+.hero-content { flex: 1.2; min-width: 300px; }
+.slogan-tag { display: inline-block; background: rgba(46, 175, 74, 0.1); color: #2EAF4A; padding: 6px 16px; border-radius: 50px; font-size: 0.8rem; font-weight: bold; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px; }
+.hero-content h1 { font-size: 2.8rem; color: #0B5294; line-height: 1.2; margin-bottom: 20px; font-weight: bold; }
+.hero-content h1 span { color: #2EAF4A; }
+.hero-content p { color: #475569; font-size: 1.05rem; margin-bottom: 25px; }
+.btn { display: inline-block; background: #2EAF4A; color: #FFFFFF; padding: 14px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 15px rgba(46,175,74,0.2); transition: background 0.2s; }
+.btn:hover { background: #0B5294; }
+.hero-graphic-card { flex: 0.8; min-width: 300px; background: #0B5294; border-radius: 16px; padding: 35px; color: #FFFFFF; border-left: 8px solid #2EAF4A; box-shadow: 0 12px 30px rgba(11,82,148,0.1); }
+.hero-graphic-card h3 { color: #2EAF4A; margin-bottom: 10px; font-size: 1.4rem; font-weight: bold; }
+.tag-core { margin-top: 20px; font-weight: bold; font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 15px; letter-spacing: 0.5px; }
+
+/* SECCION NOSOTROS, PANELES DE DOLOR Y CONTEXTO ECUADOR */
+.about-section { padding: 60px 0; }
+.section-title { font-size: 2.2rem; color: #0B5294; margin-bottom: 20px; font-weight: bold; text-align: center; }
+.section-title span { color: #2EAF4A; }
+.about-section p { color: #475569; margin-bottom: 15px; font-size: 1.05rem; text-align: justify; }
+.pane-danger { padding: 20px; border-radius: 10px; background: #FEF2F2; border: 1px solid #FCA5A5; color: #991B1B; margin-top: 25px; }
+.pane-success { padding: 20px; border-radius: 10px; background: #F0FDF4; border: 1px solid #86EFAC; color: #166534; margin-top: 15px; }
+
+/* GRID DEL PORTAFOLIO DE SOLUCIONES TI */
+.portfolio-section { background: #F8FAFC; padding: 80px 0; border-top: 1px solid #E2E8F0; }
+.portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; margin-top: 30px; }
+.portfolio-card { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
+
+/* VINCULACION DE FOTOGRAFIAS PROFESIONALES EN ALTA RESOLUCION DESDE EL SERVIDOR */
+.card-img { height: 180px; background-size: cover; background-position: center; border-bottom: 4px solid #0B5294; }
+.img-virtualization { background-image: url('https://unsplash.com'); }
+.img-storage { background-image: url('https://unsplash.com'); }
+.img-networking { background-image: url('https://unsplash.com'); }
+.img-hardware { background-image: url('https://unsplash.com'); }
+.img-cctv { background-image: url('https://unsplash.com'); }
+.img-solar { background-image: url('https://unsplash.com'); }
+.portfolio-card:nth-child(6) .card-img { border-bottom-color: #2EAF4A; }
+
+.card-body { padding: 25px; flex-grow: 1; }
+.card-body h3 { color: #0B5294; margin-bottom: 8px; font-size: 1.25rem; font-weight: bold; }
+.card-body p { color: #475569; font-size: 0.9rem; margin-bottom: 15px; }
+.details-box { background: #F8FAFC; padding: 15px; border-radius: 8px; border: 1px solid #E2E8F0; margin-top: 10px; font-size: 0.85rem; color: #334155; }
+.details-box h5 { color: #0B5294; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 5px; font-weight: bold; letter-spacing: 0.5px; }
+
+/* BLOQUE DE RECUADROS PARA MARCAS Y CLIENTES */
+.pills-flex { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 15px; }
+.pill { background: #F8FAFC; padding: 10px 20px; border-radius: 30px; font-weight: bold; font-size: 0.85rem; color: #0B5294; border: 1px solid #E2E8F0; }
+.pill.client { color: #475569; background: #FFFFFF; }
+
+/* SECCION FORMULARIO DE CONVERSION DIRECTO A WHATSAPP */
+.contact-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); background: #FFFFFF; border-radius: 16px; border: 1px solid #E2E8F0; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.02); }
+.info-side { background: linear-gradient(135deg, #0B5294 0%, #052E54 100%); color: #FFFFFF; padding: 40px; }
+.info-side h3 { font-size: 1.7rem; margin-bottom: 15px; font-weight: bold; }
+.info-side p { color: #93C5FD; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.5; }
+.form-side { padding: 40px; }
+.form-side h3 { color: #0B5294; margin-bottom: 20px; font-weight: bold; }
+.field { width: 100%; padding: 12px; border: 1px solid #CBD5E1; border-radius: 8px; margin-bottom: 15px; font-size: 0.9rem; font-family: sans-serif; }
+.field:focus { outline: none; border-color: #2EAF4A; }
+.submit-btn { width: 100%; background: #25D366; color: white; border: none; padding: 15px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 1rem; }
+.submit-btn:hover { background: #128C7E; }
+
+/* FOOTER */
+footer { background: #0F172A; color: #64748B; text-align: center; padding: 25px; font-size: 0.85rem; border-top: 1px solid #1E293B; }
+
+/* REQUISITOS RESPONSIVOS PARA SMARTPHONES Y TABLETS */
+@media (max-width: 768px) {
+  .hero-wrapper, .contact-wrapper { flex-direction: column; }
+  .nav-menu { display: none; }
+  .hero-content h1 { font-size: 2.2rem; }
+}
