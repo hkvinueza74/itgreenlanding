@@ -186,6 +186,9 @@
       margin-bottom: 25px;
       font-weight: 700;
     }
+    .hero-content h1 span {
+      color: var(--verde-logo);
+    }
     .hero-content p {
       font-size: 1.1rem;
       color: var(--gris-texto);
@@ -210,8 +213,7 @@
     .center-core {
       width: 140px;
       height: 140px;
-      background: linear-gradient(135deg, var(--azul-principal), var(--azul-logo));
-      background-color: var(--azul-logo);
+      background: var(--azul-logo);
       border-radius: 50%;
       display: flex;
       flex-direction: column;
@@ -250,13 +252,12 @@
       border-color: var(--verde-logo);
       color: var(--verde-logo);
     }
-    /* Posiciones en órbita */
     .n1 { top: -25px; left: 105px; }
     .n2 { bottom: -25px; right: 105px; }
     .n3 { top: 105px; left: -25px; }
     .n4 { top: 105px; right: -25px; }
     
-    @keyframes spin { 100% { transform: rotate(30deg); } }
+    @keyframes spin { 100% { transform: rotate(360deg); } }
 
     /* --- QUIENES SOMOS --- */
     .about {
@@ -336,8 +337,9 @@
     /* --- PORTAFOLIO DE PRODUCTOS --- */
     .portfolio-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 30px;
+      margin-top: 20px;
     }
     .portfolio-card {
       background: var(--blanco);
